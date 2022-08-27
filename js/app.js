@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 position: 'top-end',
                 showConfirmButton: false,
                 timer: 1500,
-                width: '20%',
             });
         }
 
