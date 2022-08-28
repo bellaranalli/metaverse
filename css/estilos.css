@@ -62,6 +62,17 @@
   animation-name: aparecer;
 }
 
+.titulo1{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Rubik Glitch', cursive;
+  font-weight: bold;
+  color: white;
+  text-shadow: 5px 5px 5px rgba(255, 0, 208, 0.784);
+  animation-duration: 1s;
+  animation-name: aparecer;}
+
 @keyframes aparecer {
   0% {
     opacity: 0;
