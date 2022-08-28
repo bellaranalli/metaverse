@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let buyThings = [];
     let totalCard = 0;
     let countProduct = 0;
-    let storageTotal= 0;
+    let storageTotal = 0;
     //functions
     loadEventListenrs();
     function loadEventListenrs() {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function loadHtml(add=false) {
+    function loadHtml(add = false) {
         clearHtml();
         buyThings.forEach(product => {
             const { image, title, price, amount, id } = product;
@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="delete-product" data-id="${id}">X</span>
             
         `;
-        if(!add){
-            totalCard += parseFloat(price * amount);
-        }
-        priceTotal.innerHTML = totalCard;
-        containerBuyCart.appendChild(row);
-        amountProduct.innerHTML = countProduct;
+            if (!add) {
+                totalCard += parseFloat(price * amount);
+            }
+            priceTotal.innerHTML = totalCard;
+            containerBuyCart.appendChild(row);
+            amountProduct.innerHTML = countProduct;
 
 
         });
@@ -155,7 +155,9 @@ function validarCompra(e) {
         confirmButtonText: '<h3 class="swee">ENVIAR</h3>',
         input: 'text',
         inputPlaceHolder: 'email',
-    })
+        type: 'success',
+        
+    },).then(function(){ location.reload(); }, localStorage.removeItem('carrito'));
 }
 
 
