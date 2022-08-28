@@ -9,6 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  animation: transitionIn 0.75s
 
 }
 
@@ -18,7 +19,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 200%;
-
+  animation: transitionIn 0.75s
+}
+@keyframes transitionIn {
+  from {
+      opacity: 0;
+      transform: rotateX(-5deg);
+  }
 }
 
 
